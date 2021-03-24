@@ -2,19 +2,19 @@ pipeline {
     
     agent any
     
-    environment {
-        // This can be nexus3 or nexus2 server
-        NEXUS_VERSION = "nexus3"
-        // This can be http or https
-        NEXUS_PROTOCOL = "http"
-        // Where your Nexus is running
-        NEXUS_URL = "localhost:8081"
-        // Repository where we will upload the artifact
-        NEXUS_REPOSITORY_RELEASES = "Jenkins_201"
-        NEXUS_REPOSITORY_SNAPSHOTS = "Jenkins_201"
-        // Jenkins credential id to authenticate to Nexus OSS
-        NEXUS_CREDENTIAL_ID = "IdPass"
-    }
+  environment {
+// This can be nexus3 or nexus2 server
+NEXUS_VERSION = "nexus3"
+// This can be http or https
+NEXUS_PROTOCOL = "http"
+// Where your Nexus is running
+NEXUS_URL = "localhost:8081"
+// Repository where we will upload the artifact
+NEXUS_REPOSITORY_RELEASES = "Pipeline-Project-Yorbit201-Jenkins-Repo" 
+NEXUS_REPOSITORY_SNAPSHOTS = "Pipeline-Project-Yorbit201-Jenkins-Repo"
+// Jenkins credential id to authenticate to Nexus OSS
+NEXUS_CREDENTIAL_ID = "Nexus-Cred" 
+}
     
     stages {
         stage('Build') {
